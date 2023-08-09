@@ -50,7 +50,7 @@
                 @auth
                   
                 @if(Auth::user()->role_id==1)
-                <a class="me-3 py-2 link-body-emphasis" href="{{ route('gerant.index')}}" >Gérant</a> 
+                <a class="me-3 py-2 link-body-emphasis" href="{{ route('gerants.index')}}" >Gérant</a> 
                 @endif
                 @endauth
 

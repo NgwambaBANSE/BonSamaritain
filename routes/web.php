@@ -34,7 +34,5 @@ Route::get('/search', [ProductController::class,'search'])->name('products.searc
 Route::post('/logout', [AuthController::class,'logout'])->name('auth.logout');
 Route::post('connexion', [AuthController::class,'connexion'])->name('connexion');
 
-Route::controller(GerantController::class)->group(function(){
-    Route::get('/index', 'gerantIndex')->name('gerant.index');
-    Route::get('/index1', 'gerantEdit')->name('gerant.edit');
-})->middleware('auth');
+Route::resource('gerants', GerantController::class)->middleware('auth');
+

@@ -34,11 +34,10 @@
             <td>{{ $user->email }}</td>
             <td>
                 <form action="#" method="POST">
-                    <a class="btn btn-info" href="{{ route('gerant.edit',$user->id) }}">Afficher</a>
-                    <a class="btn btn-primary" href="#">Modifier</a>
+                    <a class="btn btn-info" href="{{ route('gerants.show',$user->id) }}">Afficher</a>
                     @csrf
                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer le produit : {{ $user->nom }} ?')">Delete</button>
                 </form>
             </td>
         </tr>

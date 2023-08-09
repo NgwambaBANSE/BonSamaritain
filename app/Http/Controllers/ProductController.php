@@ -46,7 +46,8 @@ class ProductController extends Controller
         // $part = ($request->input('prix') / 10000);
         // dd($part);
         $util->detail = $request->input('detail');
-        $util->category_id = $request->input('category_id', 2);
+        $util->category_id = $request->input('category_id');
+
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');

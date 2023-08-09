@@ -38,15 +38,16 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>category:</strong>
-                <select class="form-select" name="category" aria-label="Default select example" id="">
-                @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->libele}}</option>
-                @endforeach
-                </select>
-            </div>
-        </div>
+    <div class="form-group">
+        <strong>category:</strong>
+        <select class="form-select" name="category_id" aria-label="Default select example" id="category_id">
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->libele }}</option>
+            @endforeach
+        </select>
+    </div>
+</div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Detail:</strong>

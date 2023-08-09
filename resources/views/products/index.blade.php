@@ -48,13 +48,14 @@
             <td>{{ $product->prix }}</td>
             <td>{{ $product->detail }}</td>
             <td>
+            <!-- <p>Êtes-vous sûr de vouloir supprimer le produit : {{ $product->name_produit }} ?</p> -->
                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Afficher</a>
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Modifier</a>
                     @csrf
                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+                    <button type="submit" class="btn btn-danger"  onclick="return confirm('Êtes-vous sûr de vouloir supprimer le produit : {{ $product->name_produit }} ?')">Delete</button>
+               </form>
             </td>
         </tr>
         @endforeach

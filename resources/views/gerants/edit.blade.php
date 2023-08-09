@@ -5,10 +5,10 @@
     <div class="container-fluid">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Modifier les information du gerant</h2>
+                <h2>Modifier les informations du gerant</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('products.index') }}">Retour</a>
+                <a class="btn btn-primary" href="{{ route('gerants.index') }}">Retour</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
     <div class="container-fluid">
-    <form action="{{ route('products.update',$product->id) }}" method="POST" enctype="multipart/form-data"> 
+    <form action="" method="POST" enctype="multipart/form-data"> 
         @csrf
         @method('PUT')
          <div class="row">
@@ -45,8 +45,20 @@
                 <input type="text" name="email" class="form-control" value="{{ $user->email }}" placeholder="email">
              </div>
            </div>
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <div class="form-group">
+                <strong>Mot de pass</strong>
+                <input type="text" name="password" class="form-control" value="{{ $user->password }}" placeholder="password">
+             </div>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <div class="form-group">
+                <strong>Image</strong>
+                <input type="text" name="email" class="form-control" value="{{ $user->email }}" placeholder="email">
+             </div>
+           </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Valider</button>
             </div>
         </div>
     </form>
